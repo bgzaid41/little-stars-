@@ -1,0 +1,1 @@
+import{products,card,bind}from'./db.js';let r=document.querySelector('#products');try{let a=await products();r.innerHTML=a.slice(0,8).map(card).join('')||'Add products from admin dashboard.';bind(r)}catch(e){r.textContent=e.message}
